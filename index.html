@@ -37,5 +37,19 @@
     <img src="https://as1.ftcdn.net/v2/jpg/06/18/25/42/500_F_618254232_JE2yxkq4uQy3iWCciDcaCeXcrMV6rmK3.jpg" alt="">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUMsbkfppGOtna79DM24sg7jsul0KziFMBQ&s" alt="">
   </div>
+
+  <audio id="click-sound" src="girl.wav"></audio>
+
+  <script>
+    document.querySelectorAll('.image-container img').forEach(img => {
+      img.addEventListener('click', () => {
+        const sound = document.getElementById('click-sound');
+        sound.currentTime = 0; // Rewind to the start
+        sound.play();
+      });
+    });
+  </script>
+
+
 </body>
 </html>
